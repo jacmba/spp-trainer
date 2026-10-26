@@ -1,0 +1,112 @@
+[
+{"id":"c01","title":"Fallo de motor en el despegue","cat":"Bimotor","diff":2,
+ "setup":{"ac":"PA34 Seneca","route":"LEVC → LEAL","metar":"LEVC 101000Z 30010KT 9999 FEW030 22/12 Q1018","notes":"Ambas hélices giran en sentido horario."},
+ "steps":[
+  {"viz":{"kind":"asi","ias":55},"sit":"Carrera de despegue en la 30. A 55 kt (por debajo de VMCG) el motor izquierdo pierde potencia y el avión se va hacia la izquierda.","q":"¿Qué haces?","o":["Reducir la potencia del motor derecho y abortar","Rotar inmediatamente","Más timón derecho y continuar","Abanderar el motor derecho"],"a":[0],"e":"Antes de VMCG no hay control aerodinámico suficiente: hay que quitar potencia al motor operativo.","sev":"loss"},
+  {"viz":{"kind":"asi","ias":95},"sit":"Segundo intento. Ya en el aire, a 95 kt, falla el motor izquierdo.","q":"¿Qué motor ha fallado y qué implica?","o":["El crítico: con hélices horarias el izquierdo es el crítico; la situación es la más exigente","Uno no crítico: poca corrección","Ninguno es crítico","El derecho es el crítico"],"a":[0],"e":"Con ambas hélices horarias el izquierdo tira más cerca del CG: es el crítico.","sev":"minor"},
+  {"viz":{"kind":"asi","ias":95},"sit":"El avión guiña y alabea hacia la izquierda.","q":"¿Cómo corriges?","o":["Pie derecho (timón hacia el motor operativo) y alerones a la derecha","Pie izquierdo y alerones a la izquierda","Solo alerones","Reducir el motor derecho"],"a":[0],"e":"Guiñada y alabeo van hacia el motor parado; se compensan hacia el operativo.","sev":"loss"},
+  {"viz":{"kind":"asi","ias":95},"sit":"Controlado. VMCA 70 kt, VYSE 88 kt. Vas a 95 kt.","q":"¿Qué velocidad buscas en el ascenso?","o":["VYSE (línea azul)","VMCA (línea roja)","VX","VNE"],"a":[0],"e":"VYSE: mejor régimen con un motor. Y abanderar el motor parado para quitar el molinillo.","sev":"minor"},
+  {"viz":{"kind":"asi","ias":88},"sit":"Estable a VYSE.","q":"¿Qué haces con la hélice del motor parado?","o":["Abanderarla para eliminar el efecto molinillo","Dejarla girar","Darle más paso fino","Nada"],"a":[0],"e":"Resistencia mínima con la hélice abanderada y parada.","sev":"minor"}
+ ]},
+{"id":"c02","title":"Entrada directa en VES","cat":"Esperas","diff":1,
+ "setup":{"ac":"BE58 Baron","route":"LEAS ILS Z 29","metar":"LEAS 120800Z 27012KT 6000 BKN010 11/09 Q1012","notes":"Espera estándar en VES, curso de acercamiento 110°, 4 000 ft."},
+ "steps":[
+  {"viz":{"kind":"hold","inb":110,"h":120,"right":true},"sit":"APP: «Espere sobre VES según lo publicado». Te diriges a VES con rumbo 120°.","q":"¿Qué entrada corresponde?","o":["Directa","Paralela","En gota","Ninguna"],"a":[0],"e":"Alejamiento 290°: con mano derecha e índice en 120, cae fuera de [010,120] y de [120,190] → directa.","sev":"minor"},
+  {"viz":{"kind":"hold","inb":110,"h":120,"right":true},"sit":"Pasas sobre VES.","q":"¿Primer paso de la entrada directa?","o":["Virar a la derecha al rumbo de alejamiento 290°","Virar a la izquierda a 290°","Seguir recto 1 minuto","Virar 45° a la derecha"],"a":[0],"e":"Viraje en el mismo sentido que la espera.","sev":"minor"},
+  {"viz":{"kind":"hold","inb":110,"h":120,"right":true},"sit":"Terminas el viraje antes de estar al través de VES.","q":"¿Cuándo pones en marcha el cronómetro y cuánto?","o":["Al través del fijo, 1 minuto (estás a 4 000 ft)","Al terminar el viraje, 1,5 minutos","Al pasar el fijo, 2 minutos","No se cronometra"],"a":[0],"e":"Lo más tarde entre través y fin de viraje; 1 min por debajo de 14 000 ft.","sev":"minor"},
+  {"viz":{"kind":"hold","inb":110,"h":120,"right":true},"sit":"Velocidad de espera.","q":"Si la carta no indica nada, la máxima es…","o":["230 kt","170 kt","265 kt","240 kt"],"a":[0],"e":"Hasta 14 000 ft: 230 kt (170 si la espera está limitada a CAT A y B).","sev":"minor"},
+  {"viz":{"kind":"hold","inb":110,"h":120,"right":true},"sit":"¿Cuándo termina la entrada?","q":"La entrada directa termina…","o":["Al pasar por segunda vez sobre VES","Al terminar el alejamiento","Al primer viraje","A los 4 minutos"],"a":[0],"e":"Segundo paso por el fijo.","sev":"minor"}
+ ]},
+{"id":"c03","title":"Interceptar en acercamiento","cat":"Interceptaciones","diff":1,
+ "setup":{"ac":"PA34 Seneca","route":"Ejercicio con VOR1","metar":"","notes":"El instructor te pide un curso de acercamiento."},
+ "steps":[
+  {"viz":{"kind":"rmi","qdm":70,"hdgAc":40},"sit":"RMI: cabeza 070°, cola 250°. «Intercepte el curso de acercamiento 030».","q":"¿Ruta directa o pasada?","o":["Directa (40° de diferencia)","Pasada","Imposible","Espera"],"a":[0],"e":"Cabeza 070 vs deseada 030: 40° < 90.","sev":"minor"},
+  {"viz":{"kind":"rmi","qdm":70,"hdgAc":40},"sit":"Aplica la regla.","q":"Rumbo de interceptación:","o":["100°","040°","360°","070°"],"a":[0],"e":"DC 30: 030 → 070 → +30 = 100.","sev":"loss"},
+  {"viz":{"kind":"rmi","qdm":45,"hdgAc":100},"sit":"Vuelas 100°. La cabeza de la aguja va bajando hacia 030.","q":"¿Cuándo viras?","o":["Un poco antes de que la cabeza llegue a 030, para no pasarte","Cuando la cabeza marque 100","Cuando la cola marque 030","Al pasar la estación"],"a":[0],"e":"Anticipar el viraje para quedar sobre el curso.","sev":"minor"}
+ ]},
+{"id":"c04","title":"Interceptar en alejamiento","cat":"Interceptaciones","diff":1,
+ "setup":{"ac":"DA42","route":"Ejercicio con VOR1","metar":"","notes":"G1000: HSI + RMI."},
+ "steps":[
+  {"viz":{"kind":"rmi","qdm":140,"hdgAc":300},"sit":"Cabeza 140°, cola 320°. ATC: «Aléjese por el QDR 340».","q":"¿Qué referencia comparas con la deseada?","o":["La cola (320)","La cabeza (140)","El rumbo","El radial 160"],"a":[0],"e":"En alejamiento se compara la cola.","sev":"minor"},
+  {"viz":{"kind":"rmi","qdm":140,"hdgAc":300},"sit":"Diferencia 20°.","q":"Rumbo de interceptación:","o":["025°","005°","295°","340°"],"a":[0],"e":"CD 45: 320 → 340 → +45 = 025.","sev":"loss"}
+ ]},
+{"id":"c05","title":"Ruta pasada en acercamiento","cat":"Interceptaciones","diff":3,
+ "setup":{"ac":"BE58 Baron","route":"Ejercicio con VOR1","metar":"","notes":"Solo CDI disponible."},
+ "steps":[
+  {"viz":{"kind":"cdi","crs":290,"to":true},"sit":"Centras el CDI con bandera TO en 290°. Te piden «acercarse por el radial 330».","q":"¿Curso deseado?","o":["150°","330°","290°","110°"],"a":[0],"e":"Radial inbound → recíproco: 150.","sev":"minor"},
+  {"viz":{"kind":"cdi","crs":290,"to":true},"sit":"Cabeza 290 vs deseada 150.","q":"¿Tipo de interceptación?","o":["Pasada (140°)","Directa","DC 30","CD 45"],"a":[0],"e":"Más de 90°: ruta pasada en acercamiento.","sev":"minor"},
+  {"viz":{"kind":"cdi","crs":290,"to":true},"sit":"Aplicas la regla.","q":"¿Qué haces?","o":["Rumbo 330 (rumbo radial); al través de la estación 1 minuto; luego 90° hacia la estación","Rumbo 150 directamente","Rumbo 330 y al través 45°","Rumbo 180 hasta el radial"],"a":[0],"e":"El último giro es la interceptación a cuchillo: anticípala sin pasar de 30° de alabeo.","sev":"loss"},
+  {"viz":{"kind":"cdi","crs":150,"to":false},"sit":"¿Cómo sabes que estás al través de la estación?","q":"Indicador:","o":["La bandera cambia de sector (TO/FROM)","El RMI marca 000","La barra se centra","El DME marca 0"],"a":[0],"e":"Cambio de sector en el CDI.","sev":"minor"}
+ ]},
+{"id":"c06","title":"ILS y motor y al aire en Ibiza","cat":"Aproximaciones","diff":2,
+ "setup":{"ac":"BE20 King Air","route":"LEPA → LEIB, ILS 24","metar":"LEIB 151700Z 25010KT 3000 BR BKN004 17/16 Q1015","notes":"Frustrada publicada: rumbo 242 hasta 2 000 ft, luego izquierda directo al NDB IZA."},
+ "steps":[
+  {"viz":{"kind":"none"},"sit":"Antes del IAF preparas la aproximación.","q":"¿Cuándo debes hacer el briefing de la frustrada?","o":["Antes del IAF","Al llegar a la DA","Si llega a hacer falta","Tras aterrizar"],"a":[0],"e":"La frustrada es parte de la aproximación.","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"Techo de 400 ft. Es un ILS CAT I.","q":"¿Cuál es la DH mínima de un CAT I?","o":["200 ft","100 ft","250 ft","50 ft"],"a":[0],"e":"CAT I: DH ≥ 200 ft (vis 800 m / RVR 550 m).","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"A 900 ft sobre el aeródromo (IMC) aún vas 15 kt rápido y sin flaps finales.","q":"¿Qué haces?","o":["Frustrada: no estás estabilizado a 1 000 ft en IMC","Continuar y estabilizar en final corta","Reducir potencia a ralentí","Pedir 360"],"a":[0],"e":"En IMC hay que estar estabilizado a 1 000 ft; si no, motor y al aire.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"Inicias el motor y al aire.","q":"Orden correcto:","o":["Potencia, flaps, ascenso positivo → tren arriba, instrumentos, frustrada publicada, notificar","Tren arriba, potencia, flaps","Notificar, luego potencia","Flaps arriba del todo y luego potencia"],"a":[0],"e":"Secuencia estándar.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"En la frustrada.","q":"¿Qué trayectoria sigues?","o":["Rumbo 242 hasta 2 000 ft y luego izquierda directo al NDB IZA","Directo a IZA ya","Rumbo 060","Espera sobre el VOR"],"a":[0],"e":"Frustrada publicada de la ILS 24 de Ibiza.","sev":"loss"}
+ ]},
+{"id":"c07","title":"Directo sin radar","cat":"Altitudes mínimas","diff":2,
+ "setup":{"ac":"PA34 Seneca","route":"Llegada a LEST","metar":"LEST 080600Z 21015KT 5000 RA BKN008 OVC015 12/11 Q1004","notes":"MSA del sector: 5 300 ft. Radar del APP fuera de servicio."},
+ "steps":[
+  {"viz":{"kind":"none"},"sit":"Sin servicio radar, el ATC te ofrece un directo al IAF y te pregunta si lo aceptas.","q":"Si lo aceptas, ¿qué altitud mínima te protege?","o":["La MSA (5 300 ft)","La MVA","La MOCA de la aerovía","1 000 ft AGL"],"a":[0],"e":"Sin vectores radar y fuera de procedimiento, el piloto respeta la MSA.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"Vuelve el radar y te vectorizan a 4 000 ft, por debajo de la MSA.","q":"¿Es correcto?","o":["Sí, si es compatible con la MVA/ATCSMAC; el ATC asume el franqueamiento al vectorizar","No, nunca por debajo de la MSA","Solo de día","Solo en VMC"],"a":[0],"e":"Es habitual que la MVA sea menor que la MSA.","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"Vectorizado a 4 000 ft, pierdes las comunicaciones.","q":"¿Qué haces primero en vertical?","o":["Subir inmediatamente a la MSA","Mantener 4 000 ft","Descender a la MOCA","Seguir el rumbo hasta destino"],"a":[0],"e":"Y aplicar el procedimiento de fallo de comunicaciones (7600).","sev":"loss"}
+ ]},
+{"id":"c08","title":"Fallo de comunicaciones IFR","cat":"Reglas IFR","diff":2,
+ "setup":{"ac":"BE58 Baron","route":"LEZL → LEMG, FL90","metar":"","notes":"Último nivel asignado FL90, 170 kt. ETA LEMG 1430Z."},
+ "steps":[
+  {"viz":{"kind":"none"},"sit":"Dejas de oír al ATC.","q":"¿Qué compruebas antes de declarar el fallo?","o":["Cascos, volumen, micrófono e intentar otras dependencias o aeronaves","Nada","Apagar la radio","Cambiar el código a 7700"],"a":[0],"e":"Asegurarse de que el fallo es real.","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"El fallo es real. Estás en IMC.","q":"¿Código?","o":["7600","7601","7500","7700"],"a":[0],"e":"7601 solo si eres IFR en VMC y decides aterrizar en el más cercano.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"¿Y el nivel?","q":"Durante los primeros 20 minutos…","o":["Mantienes FL90 y 170 kt (o la altitud mínima si es mayor)","Bajas a la MSA","Subes al nivel del plan de inmediato","Vuelves a LEZL"],"a":[0],"e":"Luego ajustas nivel y velocidad al plan de vuelo.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"Llegas al fijo que sirve a LEMG.","q":"¿Cuándo inicias el descenso y aterrizas?","o":["Lo más cerca posible de la ETA (1430Z) y aterrizar dentro de los 30 min siguientes","Nada más llegar","Tras una hora de espera","Cuando quieras"],"a":[0],"e":"Con EAT, se usa la EAT.","sev":"minor"}
+ ]},
+{"id":"c09","title":"Plan de vuelo para el examen","cat":"Plan de vuelo","diff":1,
+ "setup":{"ac":"PA34 Seneca","route":"LEBB → LESA (≥ 50 NM)","metar":"","notes":""},
+ "steps":[
+  {"viz":{"kind":"none"},"sit":"Rellenas la casilla 10. Llevas VHF, VOR, ILS, ADF, DME y GPS.","q":"¿Qué marcas?","o":["S, D y G","V, O, L solamente","Z","W y Y"],"a":[0],"e":"S cubre VHF, ADF, VOR e ILS; D = DME, G = GNSS.","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"Velocidad y nivel.","q":"¿Qué pones en la casilla 15?","o":["Velocidad y nivel de crucero iniciales: N0160 F090","La velocidad máxima y el techo","M016 A090","Solo VFR"],"a":[0],"e":"N + nudos TAS, F + nivel.","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"La ruta tiene aerovía entre los puntos.","q":"¿Qué haces?","o":["Usar la aerovía; el directo es la última opción","Poner todo en directos","Dejar la ruta vacía","Usar solo VOR"],"a":[0],"e":"Directos ≤ 30 min o 200 NM como norma.","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"EET y autonomía.","q":"La EET del examen…","o":["Debe ser precisa, sin tiempo extra por los ejercicios","Debe sumar 30 min por los ejercicios","Es opcional","Igual a la autonomía"],"a":[0],"e":"Se evalúa su precisión.","sev":"minor"}
+ ]},
+{"id":"c10","title":"Espera no publicada","cat":"Esperas","diff":2,
+ "setup":{"ac":"BE20 King Air","route":"Llegada a LEVC","metar":"","notes":"FL150 asignado."},
+ "steps":[
+  {"viz":{"kind":"hold","inb":150,"h":150,"right":true},"sit":"ATC: «Espere en CRISA, derrota de acercamiento 150, viraje a la derecha». No dice tiempo ni velocidad. Estás a FL150.","q":"¿Duración del alejamiento?","o":["1,5 minutos","1 minuto","2 minutos","3 minutos"],"a":[0],"e":"Por encima de 14 000 ft: 1,5 min.","sev":"minor"},
+  {"viz":{"kind":"hold","inb":150,"h":150,"right":true},"sit":"Velocidad máxima a FL150 (condiciones normales, fuera de aerovía).","q":"Máxima:","o":["240 kt","230 kt","265 kt","M0,83"],"a":[0],"e":"14 001–20 000 ft: 240 kt.","sev":"minor"},
+  {"viz":{"kind":"hold","inb":150,"h":150,"right":true},"sit":"Llegas a CRISA con rumbo 150, alineado con el acercamiento.","q":"Entrada:","o":["Directa","Paralela","Gota","Hipódromo"],"a":[0],"e":"Alejamiento 330: fuera de [040,150] y [150,220] → directa.","sev":"minor"},
+  {"viz":{"kind":"hold","inb":150,"h":150,"right":true},"sit":"ATC no dio altitud en la instrucción de espera.","q":"¿A qué nivel esperas?","o":["El último autorizado (FL150)","La MHA","FL100","El que quieras"],"a":[0],"e":"Valor por defecto.","sev":"loss"}
+ ]},
+{"id":"c11","title":"Leer una STAR","cat":"Cartas","diff":2,
+ "setup":{"ac":"DA42","route":"Llegada a LEST","metar":"","notes":"STAR del AIP con restricción subrayada 5000 en un punto y ventana FL100/FL070 en otro."},
+ "steps":[
+  {"viz":{"kind":"none"},"sit":"En un punto ves 5000 subrayado.","q":"Significa…","o":["Cruzar a 5 000 ft o superior","A 5 000 ft o inferior","Exactamente 5 000 ft","Recomendado 5 000"],"a":[0],"e":"Subrayada = mínima.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"Vas por la STAR a FL110 sin autorización de descenso.","q":"¿Puedes bajar siguiendo las altitudes de la carta?","o":["No, el descenso en la STAR requiere autorización","Sí, la carta lo autoriza","Solo hasta la MSA","Solo en VMC"],"a":[0],"e":"Bajar sin autorización sería level bust (suspenso).","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"Llegas al IAF y aún no tienes autorización para la aproximación.","q":"¿Qué haces?","o":["La espera publicada en el IAF","Iniciar la aproximación","Orbitar libremente","Volver"],"a":[0],"e":"Empezar la aproximación sin autorización es suspenso.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"Comprobación de la carta.","q":"¿Qué verificas en el pie de página?","o":["Fecha de entrada en vigor / AIRAC y número de carta","El METAR","La MSA","El peso"],"a":[0],"e":"Usar la carta vigente.","sev":"minor"}
+ ]},
+{"id":"c12","title":"Elegir aproximación","cat":"Aproximaciones","diff":3,
+ "setup":{"ac":"PA34 Seneca","route":"Destino LESO","metar":"","notes":"Disponibles: LESO RNP Z RWY 22 (CAT A, B & C), LESO NDB A (CAT A & B), ILS…"},
+ "steps":[
+  {"viz":{"kind":"none"},"sit":"Ves «LESO NDB A».","q":"¿Por qué no lleva pista?","o":["Solo tiene mínimos de circuito","Es un error","Es para helicópteros","Es CAT III"],"a":[0],"e":"Las de circuito usan A, B, C y no llevan pista.","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"En otra carta: «ILS Z RWY 32L» e «ILS Y RWY 32L».","q":"¿Cuál tiene más ventajas operativas?","o":["La Z","La Y","Iguales","La de mayor DH"],"a":[0],"e":"Z, luego Y, X…","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"El AIP publica OCH 160 ft para un ILS CAT I.","q":"¿Tu DH?","o":["200 ft","160 ft","100 ft","250 ft"],"a":[0],"e":"DA/H nunca menor que OCA/H ni que la mínima de la operación (CAT I 200 ft).","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"Una aproximación con MDH 380 ft.","q":"Es de tipo…","o":["A","B","CAT II","APV"],"a":[0],"e":"Tipo A: ≥ 250 ft.","sev":"minor"}
+ ]},
+{"id":"c13","title":"Teoría del examinador","cat":"Examen","diff":2,
+ "setup":{"ac":"BE58 Baron","route":"Parte teórica","metar":"","notes":"Preguntas típicas antes del vuelo."},
+ "steps":[
+  {"viz":{"kind":"asi","ias":120},"sit":"Te señala la línea roja intermedia del anemómetro.","q":"¿Qué es?","o":["VMCA","VNE","VS","VYSE"],"a":[0],"e":"La otra roja, al final, es VNE.","sev":"loss"},
+  {"viz":{"kind":"asi","ias":120},"sit":"Y la línea azul.","q":"Es…","o":["VYSE","VXSE","VREF","VFE"],"a":[0],"e":"Mejor régimen con un motor.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"«¿Por qué el motor izquierdo es crítico en tu Baron?» (hélices horarias).","q":"Respuesta:","o":["Por el factor P su tracción se aplica más cerca del CG; si falla, el derecho genera más momento","Porque lleva el alternador","Porque es más potente","No es crítico"],"a":[0],"e":"Clave para no suspender la teoría.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"«¿Qué es VMCA?»","q":"Respuesta:","o":["Mínima de control en el aire con el crítico inoperativo y como máximo 5° de alabeo","Velocidad mínima de crucero","Velocidad de máximo alcance","Mínima en tierra"],"a":[0],"e":"VMCG es la de tierra.","sev":"loss"}
+ ]},
+{"id":"c14","title":"Volar IFR sin altitud publicada","cat":"Reglas IFR","diff":2,
+ "setup":{"ac":"PA34 Seneca","route":"Vuelo por zona montañosa","metar":"","notes":"No hay altitud mínima publicada en ese tramo."},
+ "steps":[
+  {"viz":{"kind":"none"},"sit":"El obstáculo más alto en 8 km es de 6 300 ft.","q":"¿Altitud mínima IFR?","o":["8 300 ft","7 300 ft","6 800 ft","9 300 ft"],"a":[0],"e":"Montaña: 2 000 ft sobre el obstáculo más alto en 8 km.","sev":"loss"},
+  {"viz":{"kind":"none"},"sit":"Derrota magnética 060°.","q":"¿Qué nivel IFR eliges entre estos?","o":["FL90","FL80","FL85","FL100"],"a":[0],"e":"000–179: impares; además ≥ 8 300 ft.","sev":"minor"},
+  {"viz":{"kind":"none"},"sit":"Sales a VMC con buen tiempo para el resto del vuelo.","q":"¿Puedes cancelar el IFR?","o":["Sí: «Cancelo mi vuelo IFR» y comunicas los cambios del plan","No, nunca","Solo con 7601","Solo en tierra"],"a":[0],"e":"Solo si prevés VMC ininterrumpidas un tiempo razonable.","sev":"minor"}
+ ]}
+]

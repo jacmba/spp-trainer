@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="DejaVu Sans, Arial, sans-serif">
+  <rect width="760" height="360" fill="#f8fafc"/>
+  <text x="20" y="28" font-size="15" font-weight="bold" fill="#0f172a">Anemómetro de un bimotor ligero (valores de ejemplo)</text>
+  <g transform="translate(200,195)">
+    <circle r="150" fill="#111827"/>
+    <!-- arcs: angle = -225 + v*1.35 deg for 0..200kt -> map 40..220 kt over 300 deg -->
+    <!-- white arc 60-110 (r=128) -->
+    <path d="M -101.0 -78.6 A 128 128 0 0 1 9.3 -127.7" stroke="#ffffff" stroke-width="8" fill="none"/>
+    <!-- green 66-170 (r=116)-->
+    <path d="M -97.4 -63.0 A 116 116 0 0 1 103.3 52.8" stroke="#22c55e" stroke-width="10" fill="none"/>
+    <!-- yellow 170-200 -->
+    <path d="M 103.3 52.8 A 116 116 0 0 1 57.4 100.8" stroke="#eab308" stroke-width="10" fill="none"/>
+    <!-- red line VNE 200 -->
+    <line x1="49" y1="86" x2="70" y2="123" stroke="#ef4444" stroke-width="5"/>
+    <!-- red line VMCA 70 -->
+    <line x1="-84" y1="-73" x2="-117" y2="-101" stroke="#ef4444" stroke-width="5"/>
+    <!-- blue line VYSE 88 -->
+    <line x1="-52" y1="-99" x2="-71" y2="-136" stroke="#3b82f6" stroke-width="5"/>
+    <text x="-28" y="10" font-size="16" fill="#fff" font-weight="bold">KNOTS</text>
+    <circle r="7" fill="#9ca3af"/>
+  </g>
+  <g font-size="13.5" fill="#0f172a">
+    <text x="400" y="80"><tspan font-weight="bold">Arco blanco:</tspan> VS0 (VSL) → VFE</text>
+    <text x="400" y="110"><tspan font-weight="bold" fill="#15803d">Arco verde:</tspan> VS → VNO</text>
+    <text x="400" y="140"><tspan font-weight="bold" fill="#a16207">Arco amarillo:</tspan> VNO → VNE</text>
+    <text x="400" y="170"><tspan font-weight="bold" fill="#b91c1c">Línea roja:</tspan> VNE (y otra en VMCA)</text>
+    <text x="400" y="200"><tspan font-weight="bold" fill="#1d4ed8">Línea azul:</tspan> VYSE</text>
+    <text x="400" y="240" font-size="12.5" fill="#475569">VMCA: control con el crítico parado,</text>
+    <text x="400" y="257" font-size="12.5" fill="#475569">alabeo ≤ 5°. VYSE: mejor régimen</text>
+    <text x="400" y="274" font-size="12.5" fill="#475569">con un motor. VREF = 1,3 × VS0.</text>
+  </g>
+</svg>

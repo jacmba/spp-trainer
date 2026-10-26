@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 360" font-family="DejaVu Sans, Arial, sans-serif">
+  <rect width="760" height="360" fill="#f8fafc"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e3a8a"/></marker></defs>
+  <text x="20" y="28" font-size="15" font-weight="bold" fill="#0f172a">Espera estándar (virajes a la derecha) sobre un VOR</text>
+  <!-- inbound leg left->right ending at fix at x=560 y=230 ; outbound above -->
+  <path d="M200,110 L560,110" stroke="#1e3a8a" stroke-width="4" fill="none" marker-end="url(#a)"/>
+  <path d="M560,110 A60,60 0 0 1 560,230" stroke="#1e3a8a" stroke-width="2.5" fill="none" stroke-dasharray="7 5"/>
+  <path d="M560,230 L200,230" stroke="#1e3a8a" stroke-width="2.5" fill="none" stroke-dasharray="7 5" marker-end="url(#a)"/>
+  <path d="M200,230 A60,60 0 0 1 200,110" stroke="#1e3a8a" stroke-width="2.5" fill="none" stroke-dasharray="7 5"/>
+  <!-- fix -->
+  <polygon points="560,98 571,104 571,116 560,122 549,116 549,104" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="560" cy="110" r="3" fill="#0f172a"/>
+  <text x="580" y="92" font-size="13" font-weight="bold" fill="#0f172a">FIJO (VOR)</text>
+  <text x="215" y="137" font-size="13" font-weight="bold" fill="#1e3a8a">Tramo de ACERCAMIENTO · único de precisión (curso)</text>
+  <text x="230" y="258" font-size="13" fill="#1e3a8a">Tramo de ALEJAMIENTO · rumbo · 1 min (≤ 14 000 ft) / 1,5 min</text>
+  <text x="630" y="172" font-size="12" fill="#1e3a8a">Viraje de</text><text x="630" y="187" font-size="12" fill="#1e3a8a">alejamiento</text>
+  <text x="50" y="172" font-size="12" fill="#1e3a8a">Viraje de</text><text x="50" y="187" font-size="12" fill="#1e3a8a">acercamiento</text>
+  <line x1="560" y1="110" x2="560" y2="230" stroke="#b45309" stroke-dasharray="3 4"/>
+  <text x="440" y="200" font-size="11" fill="#b45309">al través del fijo:</text><text x="440" y="214" font-size="11" fill="#b45309">empieza el cronómetro</text>
+  <text x="20" y="300" font-size="12" fill="#334155">Virajes a 3°/s con alabeo máx. 25° · Área de espera + área tope de 5 NM · MHA ≥ 1 000 ft (2 000 ft en montaña)</text>
+  <text x="20" y="320" font-size="12" fill="#334155">Velocidad máx. ≤ 14 000 ft: 230 kt (CAT A/B 170) · 14 001–20 000: 240 · 20 001–34 000: 265 · &gt; 34 000: M0,83</text>
+</svg>

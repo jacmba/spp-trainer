@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 380" font-family="DejaVu Sans, Arial, sans-serif">
+  <rect width="760" height="380" fill="#f8fafc"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker></defs>
+  <text x="20" y="28" font-size="15" font-weight="bold" fill="#0f172a">Ambas hélices en sentido horario (vista desde arriba, morro hacia arriba)</text>
+  <!-- fuselage -->
+  <rect x="290" y="70" width="40" height="250" rx="20" fill="#cbd5e1" stroke="#334155"/>
+  <rect x="80" y="160" width="460" height="34" rx="10" fill="#e2e8f0" stroke="#334155"/>
+  <rect x="250" y="290" width="120" height="16" rx="6" fill="#e2e8f0" stroke="#334155"/>
+  <!-- engines -->
+  <rect x="165" y="130" width="30" height="70" rx="8" fill="#94a3b8" stroke="#334155"/>
+  <rect x="425" y="130" width="30" height="70" rx="8" fill="#94a3b8" stroke="#334155"/>
+  <line x1="140" y1="128" x2="220" y2="128" stroke="#334155" stroke-width="4"/>
+  <line x1="400" y1="128" x2="480" y2="128" stroke="#334155" stroke-width="4"/>
+  <!-- CG -->
+  <circle cx="310" cy="180" r="9" fill="#fff" stroke="#0f172a" stroke-width="2"/><path d="M310,171 A9,9 0 0 1 319,180 L310,180 Z M310,189 A9,9 0 0 1 301,180 L310,180 Z" fill="#0f172a"/>
+  <text x="300" y="215" font-size="12" font-weight="bold">CG</text>
+  <!-- thrust lines displaced to the right of each hub (descending blade) -->
+  <path d="M200,125 L200,60" stroke="#b91c1c" stroke-width="4" marker-end="url(#a)"/>
+  <path d="M460,125 L460,60" stroke="#b91c1c" stroke-width="4" marker-end="url(#a)"/>
+  <line x1="200" y1="240" x2="310" y2="240" stroke="#0f172a"/><text x="230" y="258" font-size="13" font-weight="bold">A (corto)</text>
+  <line x1="310" y1="240" x2="460" y2="240" stroke="#0f172a"/><text x="360" y="258" font-size="13" font-weight="bold">B (largo)</text>
+  <line x1="200" y1="232" x2="200" y2="248" stroke="#0f172a"/><line x1="460" y1="232" x2="460" y2="248" stroke="#0f172a"/>
+  <text x="20" y="85" font-size="12" fill="#b91c1c">tracción desplazada a la</text><text x="20" y="100" font-size="12" fill="#b91c1c">derecha (pala que baja)</text>
+  <g font-size="13" fill="#0f172a">
+    <text x="520" y="250" font-weight="bold">A &lt; B</text>
+    <text x="520" y="270">El motor IZQUIERDO tira</text>
+    <text x="520" y="288">más cerca del CG.</text>
+    <text x="520" y="312" font-weight="bold" fill="#b91c1c">Si falla, el derecho genera</text>
+    <text x="520" y="330" font-weight="bold" fill="#b91c1c">el mayor momento →</text>
+    <text x="520" y="348" font-weight="bold" fill="#b91c1c">IZQUIERDO = CRÍTICO</text>
+  </g>
+</svg>

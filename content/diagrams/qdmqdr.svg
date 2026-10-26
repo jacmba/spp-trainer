@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 340" font-family="DejaVu Sans, Arial, sans-serif">
+  <rect width="760" height="340" fill="#f8fafc"/>
+  <defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1e3a8a"/></marker>
+  <marker id="b" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#b45309"/></marker></defs>
+  <text x="20" y="28" font-size="15" font-weight="bold" fill="#0f172a">QDM y QDR (norte magnético arriba)</text>
+  <polygon points="200,170 211,176 211,188 200,194 189,188 189,176" fill="#fff" stroke="#0f172a" stroke-width="2"/>
+  <text x="170" y="215" font-size="13" font-weight="bold">VOR</text>
+  <line x1="200" y1="60" x2="200" y2="170" stroke="#94a3b8" stroke-dasharray="4 4"/><text x="194" y="55" font-size="12">N</text>
+  <!-- aircraft at bearing 060 from VOR: dx=sin60*170, dy=-cos60*170 -->
+  <circle cx="347" cy="97" r="7" fill="#0f172a"/><text x="358" y="92" font-size="13" font-weight="bold">Avión</text>
+  <path d="M209,175 L338,102" stroke="#b45309" stroke-width="3" marker-end="url(#b)"/>
+  <path d="M340,110 L212,183" stroke="#1e3a8a" stroke-width="3" marker-end="url(#a)"/>
+  <text x="250" y="120" font-size="13" fill="#b45309" font-weight="bold">QDR 060 = radial 060</text>
+  <text x="270" y="170" font-size="13" fill="#1e3a8a" font-weight="bold">QDM 240</text>
+  <g font-size="13.5" fill="#0f172a">
+    <text x="440" y="90"><tspan font-weight="bold">QDM</tspan>: magnético, avión → estación</text>
+    <text x="440" y="115"><tspan font-weight="bold">QDR</tspan>: magnético, estación → avión</text>
+    <text x="440" y="140">Siempre recíprocos (±180°)</text>
+    <text x="440" y="165">No dependen del rumbo del avión</text>
+    <text x="440" y="200" font-weight="bold">Radial = QDR</text>
+    <text x="440" y="225">RMI: cabeza = QDM · cola = radial</text>
+    <text x="440" y="250">CDI/HSI: centrado con FROM = radial</text>
+  </g>
+</svg>

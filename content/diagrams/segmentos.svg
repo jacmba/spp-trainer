@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 300" font-family="DejaVu Sans, Arial, sans-serif">
+  <rect width="760" height="300" fill="#f8fafc"/>
+  <text x="20" y="28" font-size="15" font-weight="bold" fill="#0f172a">Perfil de una aproximación instrumental (ILS)</text>
+  <line x1="20" y1="240" x2="740" y2="240" stroke="#a8a29e" stroke-width="6"/>
+  <rect x="600" y="234" width="130" height="8" fill="#334155"/>
+  <path d="M40,80 L240,80 L330,120 L470,120 L610,236" stroke="#1e3a8a" stroke-width="3" fill="none"/>
+  <path d="M560,195 L640,120 L740,90" stroke="#b91c1c" stroke-width="2.5" stroke-dasharray="7 5" fill="none"/>
+  <g font-size="12.5" font-weight="bold" fill="#0f172a">
+    <circle cx="40" cy="80" r="5"/><text x="30" y="68">IAF</text>
+    <circle cx="330" cy="120" r="5"/><text x="320" y="108">IF</text>
+    <circle cx="470" cy="120" r="5"/><text x="455" y="108">FAP</text>
+    <circle cx="560" cy="195" r="5" fill="#b91c1c"/><text x="490" y="215" fill="#b91c1c">DA/H</text>
+  </g>
+  <g font-size="12" fill="#1e3a8a">
+    <text x="90" y="60">Inicial (IAF → IF)</text>
+    <text x="345" y="150">Intermedio (IF → FAP)</text>
+    <text x="345" y="166">velocidad y configuración</text>
+    <text x="500" y="160">Final</text>
+  </g>
+  <text x="735" y="70" text-anchor="end" font-size="12" fill="#b91c1c" font-weight="bold">Frustrada (discontinua)</text>
+  <text x="20" y="275" font-size="12" fill="#334155">Estabilizado a 1 000 ft (IMC) / 500 ft (VMC). Sin referencias en la DA/H (3D) o el MAPt a la MDA/H (2D) → frustrada.</text>
+</svg>
